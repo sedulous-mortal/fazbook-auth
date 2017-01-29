@@ -1,0 +1,21 @@
+header {
+  background-color: teal;
+  color: white;
+}
+
+header .container h1 {
+  font-size: 36px;
+}
+
+main{
+  flex: 1 0 auto;
+}
+
+footer {
+  background-color: teal;
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
