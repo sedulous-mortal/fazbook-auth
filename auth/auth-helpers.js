@@ -31,3 +31,22 @@ function createUser(req, res) {
         res.redirect('/');
     });
 }
+
+// redirects users that aren't logged in
+//gives error message if they are logged out
+//calls next() to redirect them to user profile page if logged in
+function loginRequired(req, res, next) {
+    if (!req.user) return res.status(401).json({
+        status: 'Please log in'
+    });
+
+    return next();
+}
+
+//do exports to avoid bugs!
+module.exports = {
+    comparePass,
+    loginRedirect,
+    loginRequired,
+    createUser
+}
